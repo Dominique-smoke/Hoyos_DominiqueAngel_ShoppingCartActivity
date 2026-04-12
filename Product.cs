@@ -112,6 +112,7 @@ namespace Hoyos_ShoppingCartActivity
             }
             ShowReceipt(cart, cartItemCount);
 
+
         }
     }
 
