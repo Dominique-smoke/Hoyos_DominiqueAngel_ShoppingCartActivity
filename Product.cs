@@ -56,7 +56,62 @@ namespace Hoyos_ShoppingCartActivity
                 new Product { Id = 5, Name = "GameBoy", Price = 11000, RemainingStock = 5 };
 
 
+            };
+
+            CartItem[] cart = new CartItem[5];
+            int cartItemCount = 0;
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("===WELCOME DEAR CUSTOMER!!====");
+                foreach (var p in inventory) { p.DisplayProduct(); }
+
+                Console.WriteLine("\nEnter the Product Id you want to buy:");
+                if (!int.TryParse(Console.ReadLine(), out int prodId))
+                {
+                    Console.WriteLine("Invalid Input, press any key to continue");
+                    Console.ReadKey();
+                    continue;
+
+                }
+                if (prodId == 0) break;
+
+                Product Selected = Array.Find(inventor, p => p.Id == prodId);
+
+                if (Selected == null)
+                {
+                    Console.WriteLine("Invalid product number!");
+                }
+                else if (Selected.RemainingStock == 0)
+                {
+                    Console.WriteLine("This Item is out of stock");
+                }
+                else
+                {
+                    Console.WriteLine($"Enter quantity for {Selected.Name}:");
+                    if (!int.TryParse(Console.ReadLine(), out int qty) || qty == 0)
+                    {
+                        Console.WriteLine("Invalid Inventory");
+                    }
+                    else if (!selected.HasEnoughStock(qty))
+                    {
+                        Console.WriteLine("Not enough Stock available");
+                    }
+                    else
+                    {
+                        ProcessCartEntry(cart, ref cartItemCount, selected, qty);
+                        Selected.DeductStock(qty);
+                        Console.WriteLine("Item added to cart");
+                    }
+
+
+                }
+                Console.Write("\nAdd more Items? (Y/N): ");
+                if (Console.ReadLine().ToUpper() != "Y") break;
             }
+            ShowReceipt(cart, cartItemCount);
+
         }
     }
 

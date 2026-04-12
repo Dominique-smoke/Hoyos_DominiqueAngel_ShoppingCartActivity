@@ -1,0 +1,15 @@
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\bin\Debug\net10.0\Hoyos_ShoppingCartActivity.exe
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\bin\Debug\net10.0\Hoyos_ShoppingCartActivity.deps.json
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\bin\Debug\net10.0\Hoyos_ShoppingCartActivity.runtimeconfig.json
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\bin\Debug\net10.0\Hoyos_ShoppingCartActivity.dll
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\bin\Debug\net10.0\Hoyos_ShoppingCartActivity.pdb
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.AssemblyInfoInputs.cache
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.AssemblyInfo.cs
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.csproj.CoreCompileInputs.cache
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.sourcelink.json
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.dll
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\refint\Hoyos_ShoppingCartActivity.dll
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.pdb
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\Hoyos_ShoppingCartActivity.genruntimeconfig.cache
+C:\Users\dymhy\source\repos\Hoyos_DominiqueAngel_ShoppingCartActivity\obj\Debug\net10.0\ref\Hoyos_ShoppingCartActivity.dll
