@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hoyos_ShoppingCartActivity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6875cd272affc1d5b6b203170f94872b7ddec75b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a13f4c333029a47373c8ab906df35e7335e4049c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hoyos_ShoppingCartActivity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hoyos_ShoppingCartActivity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
