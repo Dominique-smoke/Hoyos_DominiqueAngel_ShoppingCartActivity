@@ -114,7 +114,6 @@ namespace Hoyos_ShoppingCartActivity
                 string? input = Console.ReadLine();
                 if (!string.Equals(input, "Y", StringComparison.OrdinalIgnoreCase)) break;
             }
-            ShowReceipt(cart, cartItemCount);
         }
         static void ProcessCartEntry(CartItem[] cart, ref int count, Product prod, int qty)
         {
