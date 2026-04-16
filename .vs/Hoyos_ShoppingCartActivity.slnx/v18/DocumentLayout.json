@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\dymhy\\source\\repos\\Hoyos_DominiqueAngel_ShoppingCartActivity\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-04-14T18:06:45.761Z",
               "EditorCaption": ""
@@ -45,9 +45,10 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\dymhy\\source\\repos\\Hoyos_DominiqueAngel_ShoppingCartActivity\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvwMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T16:47:18.141Z"
+              "WhenOpened": "2026-04-14T16:47:18.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,9 +58,10 @@
               "RelativeDocumentMoniker": "Product.cs",
               "ToolTip": "C:\\Users\\dymhy\\source\\repos\\Hoyos_DominiqueAngel_ShoppingCartActivity\\Product.cs",
               "RelativeToolTip": "Product.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBwAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T13:20:58.877Z"
+              "WhenOpened": "2026-04-11T13:20:58.877Z",
+              "EditorCaption": ""
             }
           ]
         }

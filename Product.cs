@@ -14,7 +14,7 @@ namespace Hoyos_ShoppingCartActivity
         public void DisplayProduct()
         {
             string stockDisplay = RemainingStock > 0 ? RemainingStock.ToString() : "OUT OF STOCK";
-            Console.WriteLine($"{Id,-5} {Name,-20} {Price,-10:C} {stockDisplay,-15}");
+            Console.WriteLine($"{Id,-5} {Name,-20} {Price,-10:C} {stockDisplay,-15}"); // used Ai here
         }
 
         public bool HasEnoughStock(int quantity) => RemainingStock >= quantity;
