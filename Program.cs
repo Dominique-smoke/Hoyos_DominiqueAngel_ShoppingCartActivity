@@ -154,25 +154,65 @@ class Program
         cartCount = 0;
         Console.WriteLine("Cart cleared."); Wait();
     }
-    static void Checkout()
+    static void Checkout() // Ask Ai what I shoud do to be able to implement reciept number and date
     {
-        double total = cart.Take(cartCount).Sum(c => c.SubTotal);
-        if (total >= 5000) total *= 0.90;
-
-        Console.WriteLine($"\nAmount Due: {total:C}");
-        Console.Write("Enter Payment: ");
-        if (double.TryParse(Console.ReadLine(), out double pay) && pay >= total)
+        if (cartCount == 0)
         {
-            string rNo = "REC-" + new Random().Next(10000, 99999);
-            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm"); 
-            orderHistory.Add($"{rNo} | {date} | Total: {total:C}");
-
-            Console.WriteLine($"\nSuccess! Change: {(pay - total):C}");
-            Console.WriteLine($"Receipt: {rNo} at {date}");
-            Array.Clear(cart, 0, cart.Length); // added when while debugging using AI
-            cartCount = 0;
+            ShowError("Cart is empty!");
+            return;
         }
-        else ShowError("Payment failed.");
+
+        double grandTotal = cart.Take(cartCount).Sum(c => c.SubTotal);
+        double discount = 0;
+        double finalTotal = grandTotal;
+
+        if (grandTotal >= 5000)
+        {
+            discount = grandTotal * 0.10;
+            finalTotal = grandTotal - discount;
+        }
+
+        double pay = 0;
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine($"Final Total to Pay: PHP {finalTotal:N2}");
+            Console.Write("Enter payment: ");
+            if (double.TryParse(Console.ReadLine(), out pay) && pay >= finalTotal)
+            {
+                break;
+            }
+            ShowError(pay < finalTotal ? "Insufficient payment." : "Invalid input.");
+        }
+
+        string rNo = new Random().Next(1000, 9999).ToString("D4");
+        string date = DateTime.Now.ToString("MMMM dd, yyyy h:mm tt");
+        double change = pay - finalTotal;
+
+        Console.Clear();
+        Console.WriteLine("========================================");
+        Console.WriteLine("             OFFICIAL RECEIPT           ");
+        Console.WriteLine("========================================");
+        Console.WriteLine($"Receipt No: {rNo}");
+        Console.WriteLine($"Date: {date}");
+        Console.WriteLine("----------------------------------------");
+        for (int i = 0; i < cartCount; i++)
+        {
+            Console.WriteLine($"- {cart[i].ProductRef.Name,-20} x{cart[i].Quantity}  {cart[i].SubTotal,10:C}");
+        }
+        Console.WriteLine("----------------------------------------");
+        Console.WriteLine($"Grand Total:          PHP {grandTotal,10:N2}");
+        Console.WriteLine($"Discount (10%):      -PHP {discount,10:N2}");
+        Console.WriteLine($"Final Total:          PHP {finalTotal,10:N2}");
+        Console.WriteLine($"Payment:              PHP {pay,10:N2}");
+        Console.WriteLine($"Change:               PHP {change,10:N2}");
+        Console.WriteLine("========================================");
+
+        orderHistory.Add($"Receipt No: {rNo} | Date: {date} | Total: {finalTotal:C}");
+        string historyEntry = $"Receipt #{rNo} - Final Total: PHP {finalTotal:N2}";
+        CheckLowStock();
+        Array.Clear(cart, 0, cart.Length);
+        cartCount = 0;
         Wait();
     }
     static void CheckLowStock()
@@ -196,8 +236,18 @@ class Program
         Console.Clear();
         Console.WriteLine("=== ORDER HISTORY ===");
         if (orderHistory.Count == 0)
+        {
             Console.WriteLine("No history.");
-        else orderHistory.ForEach(Console.WriteLine);
+        }
+        else
+        {
+
+            foreach (string transaction in orderHistory)
+            {
+                Console.WriteLine(transaction);
+            }
+        }
+        
         Wait();
     }
 
@@ -260,6 +310,21 @@ class Program
             Console.WriteLine("\nNo products found matching that name.");
         }
         Wait();
+    }
+    static bool GetUserConfirmation(string message) 
+    {
+        while (true)
+        {
+            Console.Write($"{message} (Y/N): ");
+            string input = Console.ReadLine()?.Trim().ToUpper() ?? "";
+
+            if (input == "Y") return true;
+            if (input == "N") return false;
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Invalid input. Please enter Y or N only.");
+            Console.ResetColor();
+        }
     }
 }
     
