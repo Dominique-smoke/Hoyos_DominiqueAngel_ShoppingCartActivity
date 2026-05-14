@@ -2,10 +2,29 @@
 using System.Runtime.InteropServices;
 class CartItem
 {
-    public Product ProductRef { get; set; } = new Product();
-    public int Quantity { get; set; }
+    private Product _productRef = new Product();
+    private int _quantity;
+
+    public Product ProductRef
+    {
+        get { return _productRef; }
+        set { _productRef = value; }
+    }
+
+    public int Quantity
+    {
+        get { return _quantity; }
+        set { _quantity = value; }
+    }
+
     
-    public double SubTotal => ProductRef.GetItemTotal(Quantity);
+    public double SubTotal
+    {
+        get
+        {
+            return ProductRef.GetItemTotal(Quantity);
+        }
+    }
 }
 
 
